@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairsalon OKAN | Elite Hair Artistry</title>
+    <meta name="description" content="Hairsalon OKAN - Elite Hair Styling & Colouring in Bruck an der Leitha. Experience precision and luxury. Expert cuts, color, Keratin Botox, and Balayage. Book your elite experience.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Favicon placeholder to avoid 404 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <header class="navbar reveal reveal-down">
+        <div class="logo">HAIRSALON <span>OKAN</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><button class="btn-primary open-booking">RESERVE NOW</button></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="reveal reveal-up stagger-1">PRECISION <br><em>MEETS</em> PASSION</h1>
+                <p class="reveal reveal-up stagger-2">Luxurious hair care and signature styling in Bruck an der Leitha. Experience the elite standard of artistry and precision.</p>
+                <div class="hero-actions reveal reveal-up stagger-3">
+                    <a href="#services" class="btn-secondary">Explore Services</a>
+                    <button class="btn-primary open-booking">RESERVE NOW</button>
+                </div>
+            </div>
+            <div class="hero-image shimmer-container reveal">
+                <img src="assets/hero_model.png" alt="High-end Salon Styling" loading="eager">
+                <div class="shimmer-sweep"></div>
+                <div class="image-overlay"></div>
+            </div>
+        </section>
+
+        <div class="divider-line reveal"></div>
+
+        <!-- Trust Strip -->
+        <div class="trust-strip">
+            <div class="strip-item">
+                <span class="label">Telefon</span>
+                <a href="tel:+436602227091" class="value">+43 660 222 7091</a>
+            </div>
+            <div class="strip-item">
+                <span class="label">Today</span>
+                <span class="value" id="current-hours">09:00 - 18:00</span>
+            </div>
+            <div class="strip-item">
+                <span class="label">WhatsApp</span>
+                <a href="https://wa.me/436602227091" target="_blank" class="value">Chat Now</a>
+            </div>
+            <div class="strip-item">
+                <span class="label">Instagram</span>
+                <a href="https://www.instagram.com/hairsalon_okan/" target="_blank" class="value">@hairsalon_okan</a>
+            </div>
+        </div>
+
+        <section id="services" class="services">
+            <div class="section-header reveal reveal-left">
+                <h2>Our Services</h2>
+                <div class="divider-line reveal"></div>
+            </div>
+            <div class="service-grid">
+                <div class="service-category reveal reveal-up stagger-1">
+                    <div class="category-icon">✂️</div>
+                    <h3>Styling & Care</h3>
+                    <ul>
+                        <li><span>Hairstyling</span> <span>ab 20€</span></li>
+                        <li><span>Blowdry</span> <span>ab 25€</span></li>
+                        <li><span>Updos</span> <span>ab 80€</span></li>
+                        <li><span>Hair regrowth</span> <span>ab 40€</span></li>
+                    </ul>
+                </div>
+                <div class="service-category reveal reveal-up stagger-2">
+                    <div class="category-icon">🎨</div>
+                    <h3>Colouring</h3>
+                    <ul>
+                        <li><span>Hair colouring</span> <span>ab 35€</span></li>
+                        <li><span>Balayage</span> <span>ab 90€</span></li>
+                        <li><span>Ombre hair colour</span> <span>ab 90€</span></li>
+                        <li><span>Hair highlighting</span> <span>ab 70€</span></li>
+                    </ul>
+                </div>
+                <div class="service-category reveal reveal-up stagger-3">
+                    <div class="category-icon">✨</div>
+                    <h3>Technical & Body</h3>
+                    <ul>
+                        <li><span>Keratin treatments</span> <span>ab 80€</span></li>
+                        <li><span>Hair straightening</span> <span>ab 100€</span></li>
+                        <li><span>Hair extensions</span> <span>On Req.</span></li>
+                        <li><span>Body waxing</span> <span>ab 15€</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="trust-strip reveal">
+            <div class="strip-item">
+                <span class="label">Satisfied Clients</span>
+                <span class="value counter-value" data-target="5000">0</span><span class="value">+</span>
+            </div>
+            <div class="strip-item">
+                <span class="label">Years of Mastery</span>
+                <span class="value counter-value" data-target="15">0</span><span class="value">+</span>
+            </div>
+            <div class="strip-item">
+                <span class="label">Luxury Styles</span>
+                <span class="value counter-value" data-target="1200">0</span><span class="value">+</span>
+            </div>
+        </section>
+
+        <div class="divider-line reveal"></div>
+
+        <section id="gallery" class="gallery">
+            <div class="gallery-container">
+                <div class="gallery-item large reveal reveal-up shimmer-container">
+                    <img src="assets/salon_interior.png" alt="Salon Luxury" loading="lazy">
+                    <div class="shimmer-sweep"></div>
+                    <div class="item-overlay"><span>The Studio</span></div>
+                </div>
+                <div class="gallery-item reveal reveal-up stagger-1 shimmer-container">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600" alt="Detail Work" loading="lazy">
+                    <div class="shimmer-sweep"></div>
+                    <div class="item-overlay"><span>Artistry</span></div>
+                </div>
+                <div class="gallery-item reveal reveal-up stagger-2 shimmer-container">
+                    <img src="https://images.unsplash.com/photo-1620331311520-246422ff82f9?auto=format&fit=crop&q=80&w=600" alt="Style Detail" loading="lazy">
+                    <div class="shimmer-sweep"></div>
+                    <div class="item-overlay"><span>Precision</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-line reveal"></div>
+
+        <!-- Testimonials Section -->
+        <section class="about reveal">
+            <h2>Kind Words</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-slide active reveal reveal-up stagger-1">
+                    <p>"The best salon experience in Bruck an der Leitha. True precision."</p>
+                    <strong>- Marco S.</strong>
+                </div>
+                <div class="testimonial-slide reveal reveal-up stagger-2">
+                    <p>"Absolute masters of Balayage. My hair has never looked better."</p>
+                    <strong>- Elena R.</strong>
+                </div>
+                <div class="testimonial-slide reveal reveal-up stagger-3">
+                    <p>"Luxury atmosphere and professional staff. Five stars."</p>
+                    <strong>- Julian M.</strong>
+                </div>
+            </div>
+            <div class="dots-container">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+
+        <div class="divider-line reveal"></div>
+
+        <section id="hours" class="about">
+            <div class="about-content">
+                <h2 class="reveal reveal-left">Opening Hours</h2>
+                <div class="hours-table reveal reveal-up">
+                    <div class="hour-row reveal reveal-up stagger-1"><span>Monday</span> <span>Closed</span></div>
+                    <div class="hour-row active-day reveal reveal-up stagger-2"><span>Tuesday - Friday</span> <span>09:00 - 18:00</span></div>
+                    <div class="hour-row reveal reveal-up stagger-3"><span>Saturday</span> <span>09:30 - 18:00</span></div>
+                    <div class="hour-row reveal reveal-up stagger-4"><span>Sunday</span> <span>Closed</span></div>
+                </div>
+                <p class="location-text">
+                    Visit us at: <a href="https://www.google.com/maps/place/Hairsalon+Okan/@48.0238839,16.778302,17z/data=!3m1!4b1!4m6!3m5!1s0x476c5bc7a18100c1:0x38bff8f17aecc708!8m2!3d48.0238839!4d16.778302!16s%2Fg%2F11s90m_v6c?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link">Kirchengasse 7/9, 2460 Bruck an der Leitha, Austria</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="section-header reveal reveal-left">
+                <h2>Salon Features</h2>
+                <div class="divider-line reveal"></div>
+            </div>
+
+            <div class="features-columns">
+                <!-- Group 1: Accessibility & Service -->
+                <div class="feature-card reveal reveal-up stagger-1">
+                    <div class="card-icon">♿</div>
+                    <h3>Accessibility & Service</h3>
+                    <ul>
+                        <li><span>On-site services</span></li>
+                        <li><span>Wheelchair-accessible car park</span></li>
+                        <li><span>Wheelchair-accessible entrance</span></li>
+                        <li><span>Wheelchair-accessible seating</span></li>
+                    </ul>
+                </div>
+
+                <!-- Group 2: Amenities & Planning -->
+                <div class="feature-card reveal reveal-up stagger-2">
+                    <div class="card-icon">⚡</div>
+                    <h3>Amenities & Planning</h3>
+                    <ul>
+                        <li><span>Restroom available</span></li>
+                        <li><span>Appointment required</span></li>
+                        <li><span>Appointments recommended</span></li>
+                        <li><span>Good for kids</span></li>
+                    </ul>
+                </div>
+
+                <!-- Group 3: Parking & Payments -->
+                <div class="feature-card reveal reveal-up stagger-3">
+                    <div class="card-icon">🅿️</div>
+                    <h3>Parking & Payments</h3>
+                    <ul>
+                        <li><span>Free parking lot / street</span></li>
+                        <li><span>Paid parking lot / street</span></li>
+                        <li><span>Cash only payment</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-card">
+                <h2>Elite Experience Awaits</h2>
+                <p>We combine traditional expertise with modern techniques.</p>
+                <div class="contact-actions">
+                    <a href="tel:+436602227091" class="btn-secondary">Call Now</a>
+                    <button class="btn-primary open-booking">RESERVE NOW</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3>Reserve Your Appointment</h3>
+            <p>Please fill in the details and we will contact you to confirm.</p>
+            <form id="appointment-form">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required placeholder="+43...">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Elite Service</label>
+                    <select name="service" required>
+                        <option value="">Choose your transformation</option>
+                        <optgroup label="STYLING & CARE">
+                            <option>Hairstyling</option><option>Blowdry</option>
+                            <option>Updos</option><option>Hair Regrowth</option>
+                        </optgroup>
+                        <optgroup label="COLOURING">
+                            <option>Hair Colouring</option><option>Balayage</option>
+                            <option>Ombre Hair Colour</option><option>Hair Highlighting</option>
+                        </optgroup>
+                        <optgroup label="TECHNICAL & BODY">
+                            <option>Keratin Treatment</option><option>Hair Straightening</option>
+                            <option>Hair Extensions</option><option>Body Waxing</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <input type="time" name="time" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">CONFIRM REQUEST</button>
+            </form>
+            <div id="form-success" class="hidden">
+                <div class="success-icon">✓</div>
+                <h4>Thank You!</h4>
+                <p>Your request has been saved. We will call you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hairsalon OKAN. All rights reserved. | <a href="https://www.instagram.com/hairsalon_okan/" target="_blank">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
