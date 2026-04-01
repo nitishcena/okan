@@ -1,13 +1,4 @@
 /**
-<<<<<<< HEAD
- * Hairsalon OKAN - Ready-to-Sell Final Edition
- * 
- * Features:
- * - Professional Form Data Capture (Date/Time/Service)
- * - Optimized Parallax & Scroll Performance
- * - Split-Mask Reveal Triggers
- * - 10k User Scale Readiness (Static optimization)
-=======
  * Hairsalon OKAN - Enhanced Edition
  * 
  * Features:
@@ -15,7 +6,6 @@
  * - Professional Form Data Capture
  * - Optimized Animations & Scroll Performance
  * - Mobile-first responsive enhancements
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,18 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('booking-modal');
     const openModalBtns = document.querySelectorAll('.open-booking');
     const closeModalBtn = document.querySelector('.close-modal');
-<<<<<<< HEAD
-=======
     const modalCloseArea = document.querySelector('.modal-close-area');
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     const appointmentForm = document.getElementById('appointment-form');
     const formSuccess = document.getElementById('form-success');
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
 
-<<<<<<< HEAD
-    // --- 1. Navbar Navigation Refinement ---
-=======
     // Set minimum date for booking
     const dateInput = document.querySelector('input[name="date"]');
     if (dateInput) {
@@ -46,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 1. Navbar Scroll Behavior ---
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     let lastScroll = 0;
     const handleScroll = () => {
         const currentScroll = window.pageYOffset;
@@ -54,32 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Background Glass Toggle
         navbar.classList.toggle('scrolled', currentScroll > 50);
 
-<<<<<<< HEAD
-        // Smart Hide/Show
-        if (currentScroll > lastScroll && currentScroll > 400) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        lastScroll = currentScroll;
-
-=======
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
         // Progress Tracking
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (currentScroll / height) * 100;
         if (scrollProgress) scrollProgress.style.width = scrolled + "%";
 
-<<<<<<< HEAD
-        // Parallax Glide
-        document.querySelectorAll('.hero-image img, .gallery-item img').forEach(img => {
-            const speed = 0.1;
-            const yPos = -(currentScroll * speed);
-            img.style.transform = `translateY(${yPos}px) scale(1.08)`;
-        });
-=======
         lastScroll = currentScroll;
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -101,17 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-<<<<<<< HEAD
-    // --- 2. Mesmerizing Reveal Observer ---
-    const revealOptions = { 
-        threshold: 0.1,
-        rootMargin: "0px 0px -10% 0px" 
-=======
     // --- 2. Scroll Reveal Observer ---
     const revealOptions = { 
         threshold: 0.1,
         rootMargin: "0px 0px -5% 0px" 
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -128,21 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, revealOptions);
 
-<<<<<<< HEAD
-    document.querySelectorAll('.reveal, .reveal-split, .divider-line, .counter-value, .feature-card, .shimmer-container').forEach(el => {
-        observer.observe(el);
-    });
-
-    // --- 3. Professional Counter Logic ---
-    function animateCount(obj) {
-        const target = parseInt(obj.getAttribute('data-target'));
-        let start = 0;
-        const duration = 2500;
-        const step = (timestamp) => {
-            if (!start) start = timestamp;
-            const progress = Math.min((timestamp - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 4); // Quartic ease out
-=======
     document.querySelectorAll('.reveal, .divider-line, .counter-value, .feature-card, .shimmer-container').forEach(el => {
         observer.observe(el);
     });
@@ -156,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!start) start = timestamp;
             const progress = Math.min((timestamp - start) / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 4);
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
             obj.innerHTML = Math.floor(eased * target);
             if (progress < 1) window.requestAnimationFrame(step);
             else obj.innerHTML = target;
@@ -164,31 +104,17 @@ document.addEventListener('DOMContentLoaded', () => {
         window.requestAnimationFrame(step);
     }
 
-<<<<<<< HEAD
-    // --- 4. Booking System (Ready-to-Sell) ---
-    const openModal = () => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-=======
     // --- 4. Booking Panel (Slide from Right) ---
     const openModal = () => {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         // Prevent background scrolling when modal is open
         document.documentElement.style.overflow = 'hidden';
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     };
 
     const closeModal = () => {
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
-<<<<<<< HEAD
-        setTimeout(() => {
-            appointmentForm.classList.remove('hidden');
-            formSuccess.classList.add('hidden');
-            appointmentForm.reset();
-        }, 300);
-=======
         document.documentElement.style.overflow = '';
         // Reset form after close animation completes
         setTimeout(() => {
@@ -200,14 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
             formSuccess.style.opacity = '';
             if (appointmentForm) appointmentForm.reset();
         }, 500);
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     };
 
     openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-<<<<<<< HEAD
-    window.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-=======
     if (modalCloseArea) modalCloseArea.addEventListener('click', closeModal);
     
     // Close on overlay click
@@ -221,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 
     // Form Processing
     if (appointmentForm) {
@@ -229,10 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const data = new FormData(appointmentForm);
             
-<<<<<<< HEAD
-            // Professional Data Object
-=======
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
             const appointment = {
                 id: 'OKAN-' + Date.now(),
                 customer: data.get('name'),
@@ -243,11 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 timestamp: new Date().toISOString()
             };
 
-<<<<<<< HEAD
-            // Save to LocalDatabase (Simulation)
-=======
             // Save to localStorage
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
             const list = JSON.parse(localStorage.getItem('okan_bookings') || '[]');
             list.push(appointment);
             localStorage.setItem('okan_bookings', JSON.stringify(list));
@@ -262,24 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-<<<<<<< HEAD
-    // --- 5. Auto-Play Testimonials ---
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const dots = document.querySelectorAll('.dot');
-    let idx = 0;
-
-    if (slides.length > 0) {
-        setInterval(() => {
-            slides[idx].classList.remove('active');
-            dots[idx].classList.remove('active');
-            idx = (idx + 1) % slides.length;
-            slides[idx].classList.add('active');
-            dots[idx].classList.add('active');
-        }, 5000);
-    }
-
-    // Scroll Spy for Navbar
-=======
     // --- 5. 3D Testimonial Carousel ---
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.dot');
@@ -333,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 6. Scroll Spy for Active Nav Link ---
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     const spy = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -341,13 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
             }
         });
-<<<<<<< HEAD
-    }, { threshold: 0.55 });
-    sections.forEach(s => spy.observe(s));
-});
-=======
     }, { threshold: 0.3 });
     
     sections.forEach(s => spy.observe(s));
 });
->>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
