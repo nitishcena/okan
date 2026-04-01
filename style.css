@@ -882,6 +882,11 @@ nav ul li a:hover::after { width: 100%; }
     padding-right: 2.5rem;
 }
 
+.form-group select option {
+    background: #1A1612;
+    color: #FBF7F5;
+}
+
 .form-group input[type="date"],
 .form-group input[type="time"] {
     color-scheme: dark;
