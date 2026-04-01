@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtn = document.querySelector('.close-modal');
     const appointmentForm = document.getElementById('appointment-form');
     const formSuccess = document.getElementById('form-success');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
 
     // --- 1. Navbar Navigation Refinement ---
     let lastScroll = 0;
@@ -49,6 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // --- Mobile Menu Logic ---
+    if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
 
     // --- 2. Mesmerizing Reveal Observer ---
     const revealOptions = { 
