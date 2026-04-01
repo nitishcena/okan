@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
     --blush: #E8C5A8;
     --blush-light: #f5e6d8;
     --blush-dark: #cc9f7c;
@@ -13,6 +14,25 @@
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
     --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+=======
+    --gold: #C9A84C;
+    --gold-light: #E2C97E;
+    --gold-dark: #A8882F;
+    --blush: #D4AF37;
+    --blush-light: #f5e6d8;
+    --charcoal: #1A1612;
+    --charcoal-light: #2A2520;
+    --bg-dark: #0A0908;
+    --text-white: #FBF7F5;
+    --text-muted: #8A7E74;
+    --glass: rgba(26, 22, 18, 0.92);
+    --glass-border: rgba(212, 175, 55, 0.15);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    --shadow-gold: 0 20px 60px rgba(201, 168, 76, 0.15);
+    --shadow-heavy: 0 30px 80px rgba(0, 0, 0, 0.6);
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,13 +45,24 @@ body {
     font-family: var(--font-body);
     line-height: 1.7;
     overflow-x: hidden;
+<<<<<<< HEAD
 }
 
 /* Typography */
+=======
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======================
+   TYPOGRAPHY
+   ====================== */
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 h1, h2, h3, h4 { 
     font-family: var(--font-heading); 
     letter-spacing: 0.05em; 
     font-weight: 600; 
+<<<<<<< HEAD
     background: linear-gradient(to right, #D4AF37, #F7E7CE, #D4AF37);
     -webkit-background-clip: text;
     background-clip: text;
@@ -43,10 +74,44 @@ em { font-style: italic; color: var(--blush); font-weight: 400; -webkit-text-fil
 h1 { font-size: clamp(3.5rem, 12vw, 6rem); line-height: 1; margin-bottom: 2rem; }
 h2 { font-size: clamp(2.5rem, 6vw, 3.5rem); text-align: center; }
 h3 { font-size: 2rem; }
+=======
+    line-height: 1.2;
+}
+
+h1 { 
+    font-size: clamp(3rem, 10vw, 5.5rem); 
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F7E7CE 40%, var(--gold) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 30px rgba(201, 168, 76, 0.2);
+}
+
+h2 { 
+    font-size: clamp(2rem, 5vw, 3rem); 
+    text-align: center;
+    background: linear-gradient(135deg, var(--gold) 0%, #F7E7CE 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+h3 { 
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    color: var(--gold);
+}
+
+p { color: var(--text-muted); font-weight: 300; line-height: 1.8; }
+
+em { font-style: italic; color: var(--gold-light); -webkit-text-fill-color: var(--gold-light); }
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 
 a { text-decoration: none; color: inherit; transition: var(--transition); cursor: pointer; }
 ul { list-style: none; }
 
+<<<<<<< HEAD
 /* Buttons */
 .btn-primary {
     background: var(--blush);
@@ -126,6 +191,101 @@ ul { list-style: none; }
     position: fixed;
     top: 0; width: 100%;
     padding: 2rem 6%;
+=======
+/* ======================
+   LUXURY BUTTONS
+   ====================== */
+.btn-primary {
+    position: relative;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    background-size: 200% 100%;
+    color: var(--charcoal);
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.7s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background-position: 100% 0;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(201, 168, 76, 0.35);
+}
+
+.btn-secondary {
+    position: relative;
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    color: var(--gold);
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    border-radius: 2px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.05), rgba(201, 168, 76, 0.15));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover::before {
+    opacity: 1;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.2);
+}
+
+/* ======================
+   HEADER / NAVBAR
+   ====================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 6%;
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,6 +296,7 @@ ul { list-style: none; }
 
 .navbar.scrolled {
     background: var(--glass);
+<<<<<<< HEAD
     backdrop-filter: blur(20px);
     padding: 1.2rem 6%;
     border-bottom: 1px solid var(--glass-border);
@@ -163,12 +324,155 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
 /* Trust Strip */
 .trust-strip {
     min-height: 120px;
+=======
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    padding: 1rem 6%;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.logo span { color: var(--gold); font-weight: 400; }
+
+nav ul { display: flex; gap: 2.5rem; align-items: center; }
+nav ul li a { 
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.15em; 
+    opacity: 0.8;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+nav ul li a:hover { opacity: 1; color: var(--gold); }
+nav ul li a:hover::after { width: 100%; }
+
+.menu-toggle { 
+    display: none; 
+    flex-direction: column; 
+    gap: 6px; 
+    cursor: pointer; 
+    z-index: 1001;
+    padding: 10px;
+}
+.menu-toggle .bar { 
+    width: 28px; 
+    height: 2px; 
+    background: var(--text-white); 
+    transition: var(--transition);
+    transform-origin: center;
+}
+
+.menu-toggle.active .bar:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.menu-toggle.active .bar:nth-child(2) { transform: rotate(-45deg) translate(6px, -6px); }
+
+/* ======================
+   HERO SECTION
+   ====================== */
+.hero { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero-content { 
+    width: 55%; 
+    padding-left: 8%; 
+    z-index: 5; 
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-image { 
+    position: absolute; 
+    right: -5%; 
+    top: 0; 
+    width: 55%; 
+    height: 100%; 
+    z-index: 1; 
+    overflow: hidden;
+    /* Fallback gradient if image fails to load */
+    background: linear-gradient(135deg, #2A2520 0%, #1A1612 30%, #3D3429 60%, #2A2520 100%);
+}
+
+.hero-image::before {
+    content: '✂';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    opacity: 0.1;
+    z-index: 0;
+    color: var(--gold);
+}
+
+.hero-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    animation: kenBurns 25s infinite alternate ease-in-out; 
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+}
+
+.image-overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(to right, var(--bg-dark) 15%, rgba(10,9,8,0.8) 40%, transparent);
+    z-index: 2;
+}
+
+/* ======================
+   TRUST STRIP
+   ====================== */
+.trust-strip {
+    min-height: 100px;
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     background: var(--charcoal);
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
+<<<<<<< HEAD
     flex-wrap: wrap;
     padding: 2rem;
 }
@@ -224,10 +528,66 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
     border: 1px solid var(--glass-border);
     transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
     perspective: 1000px;
+=======
+    padding: 2rem 5%;
+    gap: 1rem;
+}
+
+.strip-item { 
+    text-align: center; 
+    padding: 1rem 1.5rem;
+}
+
+.strip-item .label { 
+    display: block; 
+    font-size: 0.65rem; 
+    color: var(--gold); 
+    text-transform: uppercase; 
+    letter-spacing: 0.2em; 
+    margin-bottom: 0.5rem; 
+}
+
+.strip-item .value { 
+    font-size: 1rem; 
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.strip-item a.value:hover { color: var(--gold); }
+
+/* ======================
+   SERVICES
+   ====================== */
+.services { padding: 8rem 8%; }
+.section-header { margin-bottom: 4rem; text-align: center; }
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    width: 0;
+    margin: 1.5rem auto;
+    transition: width 1.2s ease-in-out;
+}
+.divider-line.active { width: 120px; }
+
+.service-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+}
+
+.service-category { 
+    background: linear-gradient(165deg, var(--charcoal-light) 0%, rgba(26,22,18,0.6) 100%); 
+    padding: 3rem 2.5rem; 
+    border-radius: 4px; 
+    border: 1px solid var(--glass-border); 
+    transition: var(--transition);
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
     position: relative;
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .feature-card::before {
     content: '';
     position: absolute;
@@ -346,10 +706,600 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
 
 /* Animation Utility Classes */
 .reveal { opacity: 0; will-change: transform, opacity, clip-path; }
+=======
+.service-category::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--gold), transparent 40%, var(--gold));
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-category:hover::before {
+    opacity: 0.3;
+}
+
+.service-category:hover { 
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-gold);
+}
+
+.category-icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
+    filter: grayscale(0.3);
+}
+
+.service-category h3 { 
+    margin-bottom: 1.5rem;
+}
+
+.service-category ul li {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1rem 0; 
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+    font-size: 0.9rem; 
+    color: var(--text-muted);
+}
+
+.service-category ul li:last-child {
+    border-bottom: none;
+}
+
+.service-category ul li span:nth-child(2) { 
+    font-weight: 600; 
+    color: var(--gold); 
+}
+
+/* ======================
+   GALLERY
+   ====================== */
+.gallery { padding: 6rem 8%; }
+.gallery-container { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
+
+.gallery-item { 
+    position: relative; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    aspect-ratio: 3/4;
+    /* Fallback gradients for images */
+    background: linear-gradient(160deg, #2A2520 0%, #1A1612 50%, #3D3429 100%);
+}
+
+.gallery-item.large { 
+    grid-row: span 2;
+    aspect-ratio: auto;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(201, 168, 76, 0.02) 20px, rgba(201, 168, 76, 0.02) 40px);
+    z-index: 0;
+}
+
+.gallery-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: grayscale(0.6) brightness(0.9); 
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-item:hover img { 
+    filter: grayscale(0) brightness(1) scale(1.05); 
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay span {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+}
+
+/* ======================
+   ABOUT / TESTIMONIALS
+   ====================== */
+.about { 
+    padding: 8rem 8%; 
+    background: var(--charcoal); 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '"';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 15rem;
+    color: rgba(201, 168, 76, 0.03);
+    pointer-events: none;
+    line-height: 1;
+}
+
+.testimonial-carousel { 
+    position: relative; 
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    max-width: 800px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.testimonial-slide { 
+    position: absolute; 
+    opacity: 0;
+    transform: translateX(100%) rotateY(-15deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.testimonial-slide.active { 
+    opacity: 1; 
+    z-index: 10; 
+    transform: translateX(0) rotateY(0);
+}
+
+.testimonial-slide.exiting {
+    opacity: 0;
+    transform: translateX(-100%) rotateY(15deg);
+}
+
+.testimonial-slide p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-white);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.testimonial-slide strong {
+    font-family: 'Outfit', sans-serif;
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.testimonial-slide strong::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 12px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.testimonial-slide strong::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 12px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.dots-container { display: flex; gap: 12px; margin-top: 2rem; justify-content: center; }
+.dot { 
+    width: 8px; 
+    height: 8px; 
+    background: transparent; 
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 50%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.dot:hover {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.2);
+}
+.dot.active { 
+    width: 24px; 
+    background: var(--gold); 
+    border-color: var(--gold);
+    border-radius: 4px;
+}
+
+/* ======================
+   HOURS TABLE
+   ====================== */
+.hours-table { 
+    max-width: 550px; 
+    margin: 2.5rem auto; 
+    background: rgba(255,255,255,0.02);
+    padding: 2rem 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--glass-border);
+}
+
+.hour-row { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1.2rem 0; 
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.hour-row:last-child {
+    border-bottom: none;
+}
+
+.active-day { 
+    color: var(--text-white); 
+}
+.active-day span:last-child {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.location-text { 
+    margin-top: 3rem; 
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.location-text a {
+    color: var(--gold);
+    transition: var(--transition);
+}
+
+.location-text a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ======================
+   FEATURES
+   ====================== */
+.features { padding: 8rem 8%; background: var(--bg-dark); }
+
+.features-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.feature-card {
+    background: linear-gradient(165deg, var(--charcoal-light), rgba(26,22,18,0.5));
+    padding: 3rem 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+}
+
+.card-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+
+.feature-card h3 { margin-bottom: 1.5rem; }
+
+.feature-card ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.feature-card ul li::before {
+    content: '✦';
+    margin-right: 10px;
+    color: var(--gold);
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+/* ======================
+   CONTACT SECTION
+   ====================== */
+.contact { 
+    padding: 8rem 8%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.contact-card { 
+    background: linear-gradient(165deg, var(--charcoal-light), rgba(26,22,18,0.7)); 
+    padding: 5rem; 
+    border-radius: 4px; 
+    text-align: center; 
+    border: 1px solid var(--glass-border); 
+    max-width: 800px; 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.contact-card p {
+    max-width: 500px;
+    margin: 1rem auto 0;
+}
+
+.contact-actions { display: flex; gap: 1.5rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; }
+
+/* ======================
+   BOOKING MODAL (Slide from Right)
+   ====================== */
+.modal-overlay { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2000; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: var(--transition);
+}
+
+.modal-overlay.active { 
+    opacity: 1; 
+    visibility: visible;
+}
+
+.modal-content { 
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    background: linear-gradient(180deg, #1E1A16 0%, #151210 100%);
+    padding: 3.5rem 3rem;
+    overflow-y: auto;
+    transition: right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-left: 1px solid var(--glass-border);
+    box-shadow: -30px 0 60px rgba(0,0,0,0.5);
+    z-index: 2001;
+}
+
+.modal-overlay.active .modal-content {
+    right: 0;
+}
+
+.modal-close-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 520px);
+    height: 100%;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 100%;
+    }
+    .modal-close-area {
+        width: 100%;
+    }
+}
+
+.close-modal { 
+    position: absolute; 
+    top: 1.5rem; 
+    right: 1.5rem; 
+    background: transparent; 
+    border: 1px solid var(--glass-border);
+    color: var(--text-white);
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem; 
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: var(--gold);
+    transform: rotate(90deg);
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.modal-content > p {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+#appointment-form {
+    margin-top: 2rem;
+}
+
+.form-group-row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group { 
+    text-align: left; 
+    margin-bottom: 1.2rem; 
+}
+
+.form-group label { 
+    display: block; 
+    font-size: 0.65rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.15em; 
+    margin-bottom: 0.6rem; 
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.form-group input, .form-group select { 
+    width: 100%; 
+    padding: 1rem 1.2rem; 
+    background: rgba(255,255,255,0.03); 
+    border: 1px solid var(--glass-border); 
+    color: var(--text-white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    border-radius: 2px; 
+    transition: var(--transition);
+    appearance: none;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A84C' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    color-scheme: dark;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--gold); 
+    outline: none; 
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+    background: rgba(255,255,255,0.05);
+}
+
+#form-success { 
+    padding: 3rem 0; 
+    text-align: center;
+}
+
+.success-icon { 
+    font-size: 5rem;
+    color: var(--gold); 
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+#form-success h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#form-success p {
+    max-width: 100%;
+}
+
+/* ======================
+   FOOTER
+   ====================== */
+footer {
+    background: var(--charcoal);
+    border-top: 1px solid var(--glass-border);
+    padding: 3rem 6%;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.footer-bottom a {
+    color: var(--gold);
+}
+
+/* ======================
+   SCROLL PROGRESS BAR
+   ====================== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    width: 0%;
+    z-index: 3000;
+}
+
+/* ======================
+   REVEAL ANIMATIONS
+   ====================== */
+.reveal { opacity: 0; will-change: transform, opacity; }
+
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 .reveal-up { transform: translateY(40px); transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
 .reveal-left { transform: translateX(-60px); transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
 .reveal-mask { clip-path: inset(0 0 100% 0); transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1); opacity: 1; }
 
+<<<<<<< HEAD
 /* Vertical Split Reveal */
 .reveal-split {
     clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 50%, 0 50%, 0 50%, 100% 50%, 100% 50%, 100% 100%, 0 100%);
@@ -360,12 +1310,15 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
     clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 45%, 0 45%, 0 55%, 100% 55%, 100% 50%, 100% 100%, 0 100%);
 }
 
+=======
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 .reveal.active {
     opacity: 1;
     transform: translate(0, 0);
 }
 .reveal-mask.active { clip-path: inset(0 0 0 0); }
 
+<<<<<<< HEAD
 /* Shimmer Overlay */
 .shimmer-container { position: relative; overflow: hidden; }
 .shimmer-sweep {
@@ -380,12 +1333,15 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
     left: 100%;
 }
 
+=======
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
 /* Staggered Reveals */
 .stagger-1 { transition-delay: 0.1s !important; }
 .stagger-2 { transition-delay: 0.2s !important; }
 .stagger-3 { transition-delay: 0.3s !important; }
 .stagger-4 { transition-delay: 0.4s !important; }
 
+<<<<<<< HEAD
 /* Keyframes */
 @keyframes kenBurns {
     from { transform: scale(1); }
@@ -423,10 +1379,96 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
     nav ul {
         position: fixed;
         top: 0; left: 0; width: 100%; height: 100vh;
+=======
+/* Shimmer Effects */
+.shimmer-container { position: relative; overflow: hidden; }
+.shimmer-sweep {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    background: linear-gradient(105deg, transparent 40%, rgba(201, 168, 76, 0.08) 50%, transparent 60%);
+}
+
+/* ======================
+   HERO REVEALS (Page Load)
+   ====================== */
+.hero .reveal-up {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+.hero .stagger-1 { animation-delay: 0.2s; }
+.hero .stagger-2 { animation-delay: 0.4s; }
+.hero .stagger-3 { animation-delay: 0.6s; }
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+/* ======================
+   DESKTOP RESPONSIVE (Large Screens)
+   ====================== */
+@media (min-width: 1600px) {
+    .hero-content {
+        padding-left: 12%;
+        max-width: 800px;
+    }
+    .container-fluid {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* ======================
+   TABLET RESPONSIVE (769px - 1024px)
+   ====================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-content {
+        width: 60%;
+        padding-left: 5%;
+    }
+    .hero-image {
+        width: 55%;
+    }
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .features-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+}
+
+/* ======================
+   MOBILE RESPONSIVE (max-width: 768px)
+   ====================== */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
         background: var(--bg-dark);
         flex-direction: column;
         justify-content: center;
         align-items: center;
+<<<<<<< HEAD
         transform: translateY(-100%);
         transition: transform 0.4s ease;
         z-index: 999;
@@ -450,3 +1492,185 @@ nav ul a:hover { opacity: 1; color: var(--blush); }
     
     .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }
+=======
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+        z-index: 999;
+        gap: 2.5rem;
+    }
+    
+    nav ul.active { 
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        letter-spacing: 0.25em;
+    }
+
+    /* Hero */
+    .hero { 
+        min-height: 100vh;
+        flex-direction: column; 
+        text-align: center; 
+        padding-top: 10rem; 
+    }
+
+    .hero-content { 
+        width: 100%; 
+        padding: 0 6%;
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-actions .btn-secondary,
+    .hero-actions .btn-primary {
+        width: 100%;
+    }
+
+    .hero-image { 
+        position: relative; 
+        width: 100%; 
+        height: 45vh;
+        min-height: 250px;
+        order: 1;
+    }
+
+    .image-overlay { 
+        background: linear-gradient(to top, var(--bg-dark) 10%, transparent); 
+    }
+
+    /* Services */
+    .service-grid { 
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-category {
+        padding: 2.5rem 2rem;
+    }
+
+    /* Trust strip */
+    .trust-strip { 
+        flex-direction: column; 
+        gap: 1.5rem;
+        padding: 2rem 6%;
+    }
+
+    .strip-item {
+        padding: 0.8rem 0;
+    }
+
+    /* Gallery */
+    .gallery-container { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
+        height: auto;
+    }
+    .gallery-item {
+        aspect-ratio: 3/4;
+    }
+    .gallery-item.large {
+        grid-row: span 1;
+        aspect-ratio: 3/4;
+    }
+
+    /* Sections */
+    .services,
+    .gallery,
+    .about,
+    .features,
+    .contact { 
+        padding: 5rem 6%; 
+    }
+
+    /* Contact */
+    .contact-card { 
+        padding: 3rem 2rem;
+    }
+    .contact-actions { 
+        flex-direction: column; 
+        gap: 1rem;
+    }
+
+    /* Features */
+    .features-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Modal */
+    .modal-content { 
+        padding: 2.5rem 1.5rem; 
+        max-width: 100%;
+    }
+
+    .form-group-row { 
+        grid-template-columns: 1fr; 
+        gap: 0;
+    }
+
+    /* Typography */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.3rem; }
+
+    .btn-primary, .btn-secondary { 
+        width: 100%; 
+        text-align: center;
+    }
+
+    .testimonial-carousel {
+        height: 280px;
+    }
+
+    .testimonial-slide p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ======================
+   SMALL MOBILE (< 420px)
+   ====================== */
+@media (max-width: 420px) {
+    .hero-content {
+        padding: 0 4%;
+    }
+
+    .hero-image {
+        height: 35vh;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    .services,
+    .gallery,
+    .about,
+    .features,
+    .contact { 
+        padding: 4rem 4%; 
+    }
+
+    .navbar {
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+>>>>>>> 86bf15f (Revamp website: luxury design, responsive fixes, slide-in booking panel, 3D testimonials)
